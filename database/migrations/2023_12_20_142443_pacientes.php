@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('pacientes', function (Blueprint $table) {
         $table->increments('id');
+        $table->text('dni')->unique()->index();
         $table->string('name');
-        $table->text('dni');
         $table->integer('edad');
         $table->date('fecha_nac');
         $table->timestamps();

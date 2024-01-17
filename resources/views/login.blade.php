@@ -22,10 +22,7 @@
 		    <input type="checkbox" class="form-check-input" id="rememberCheck" name="remember">
 		    <label class="form-check-label" for="rememberCheck">Mantener sesión iniciada</label>
 		  </div>
-		  <div>
-		  	<p>¿No tienes cuenta? <a href="{{route('registro')}}">Regístrate</a></p>
-		  </div>
-		  <button type="submit" class="btn btn-primary">Acceder</button>
+		  <button type="submit" class="btn btn-primary">Ingresar</button>
 		</form>
 	</main>
 </body>

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
-use App\Models\Usuario;
 use Illuminate\Http\Request;
 
 class AdministradorController extends Controller
@@ -53,9 +52,9 @@ class AdministradorController extends Controller
     }
 
 
-    public function destroy(User $user)
+    public function destroy(User $users)
     {
-        $user->delete();
+        $users->delete();
         return redirect()->route('administrador.index')->with('success','Producto eliminado exitosamente.');
     }
 }

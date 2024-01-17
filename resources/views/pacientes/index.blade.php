@@ -54,5 +54,5 @@
     @endif
 
     {!! $pacientes->links() !!}
-
+   {{--  <div>  <a href="{{route('logout')}}"> <button type="button" class="btn btn-primary" style="margin-top: 1rem" >Salir</button></a></div> --}}
 @endsection

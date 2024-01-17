@@ -31,10 +31,6 @@
                     <td>{{ $user->name }}</td>
                     <td>
                         <form action="{{ route('administrador.destroy',$user->id) }}" method="POST">
-
-                            <a class="btn btn-info" href="{{ route('administrador.show',$user->id) }}">Ver</a>
-                            <a class="btn btn-primary" href="{{ route('administrador.edit',$user->id) }}">Modificar</a>
-
                             @csrf
                             @method('DELETE')
 
@@ -49,5 +45,5 @@
     @endif
 
     {!! $users->links() !!}
-
+<div>  <a href="{{route('InicioAdmin')}}"> <button type="button" class="btn btn-primary" style="margin-top: 1rem" >Volver</button></a></div> 
 @endsection

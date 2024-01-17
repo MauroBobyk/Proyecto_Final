@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="text-center">Modificar Producto</h2>
+            <h2 class="text-center">Modificar Paciente</h2>
         </div>
         <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
             <a class="btn btn-primary" href="{{ route('pacientes.index') }}"> Volver</a>

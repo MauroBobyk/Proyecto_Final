@@ -40,9 +40,9 @@ class LoginController extends Controller
             $request->session()->regenerate();
             $user = Auth::user();
             if ($user->name === 'Administrador') {
-                return redirect('administrador');
+                return redirect('InicioAdmin');
             } else {
-        /*         return redirect()->intended(route('pacientes')); */
+                return redirect('InicioPaciente');
             }
 
         }else {

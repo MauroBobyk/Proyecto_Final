@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PacienteController;
+use App\Http\Controllers\HistoriaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdministradorController;
 use App\Http\Controllers\MedicoController;
@@ -13,12 +14,12 @@ Route::get('/', function () {
 
 //Carga de pacientes e historial
 Route::view('InicioPaciente',"InicioPaciente")->middleware('auth')->name('InicioPaciente');
-Route::resource('pacientes',PacienteController::class);
-
+Route::resource('pacientes',PacienteController::class)->middleware('auth');
+Route::resource('historial',HistoriaController::class)->middleware('auth');
 
 //Funcion para Administrador
-Route::resource('administrador',AdministradorController::class);
-Route::resource('medicos',MedicoController::class);
+Route::resource('administrador',AdministradorController::class)->middleware('auth');
+Route::resource('medicos',MedicoController::class)->middleware('auth');
 Route::view('InicioAdmin',"InicioAdmin")->middleware('auth')->name('InicioAdmin');
 
 

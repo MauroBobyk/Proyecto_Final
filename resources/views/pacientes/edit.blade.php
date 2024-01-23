@@ -3,8 +3,9 @@
 @section('content')
 
     <div class="row">
+        <title> Modificacion de pacientes </title>
         <div class="col-lg-12">
-            <h2 class="text-center">Modificar Paciente</h2>
+            <h2 class="text-center">Modificar al Paciente {{ $paciente->name }}</h2>
         </div>
         <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
             <a class="btn btn-primary" href="{{ route('pacientes.index') }}"> Volver</a>
@@ -29,24 +30,22 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Nombre:</strong>
-                    <input type="text" name="name" value="{{ $paciente->name }}" class="form-control" placeholder="Nombre">
+                    <strong>Nombre y Apellido:</strong>
+                    <input type="text" name="name" class="form-control" placeholder="Nombre y Apellido">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>dni:</strong>
-                    <textarea class="form-control" style="height:150px" name="dni" placeholder="Detalles">{{ $paciente->dni }}</textarea>
+                    <strong>Edad:</strong>
+                    <input type="text" name="edad" class="form-control" placeholder="Edad">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>edad:</strong>
-                    <input type="number" name="edad" value="{{ $paciente->edad }}" class="form-control" >
+                    <strong>Fecha de Nacimiento:</strong>
+                    <input type="date" name="fecha_nac" class="form-control" placeholder="Fecha de nacimiento">
                 </div>
             </div>
-
-
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Aceptar</button>
             </div>

@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="text-center">Agregar Producto</h2>
+            <h2 class="text-center">Agregar Paciente a la Base de Datos</h2>
         </div>
         <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
             <a class="btn btn-primary" href="{{ route('pacientes.index') }}"> Volver</a>
@@ -34,13 +34,13 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>DNI:</strong>
+                    <strong>DNI/CI:</strong>
                     <input type="text" class="form-control" name="dni" placeholder="DNI/CI">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>edad:</strong>
+                    <strong>Edad:</strong>
                     <input type="text" name="edad" class="form-control" placeholder="Edad">
                 </div>
             </div>

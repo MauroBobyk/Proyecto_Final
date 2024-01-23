@@ -4,10 +4,11 @@
 
     <div class="row">
         <div class="col-lg-12">
+        
             <h2 class="text-center">Carga de pacientes</h2>
         </div>
         <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
-            <a class="btn btn-success " href="{{ route('pacientes.create') }}"> Agregar Producto</a>
+            <a class="btn btn-success " href="{{ route('pacientes.create') }}"> Agregar Pacientes</a>
         </div>
     </div>
 
@@ -52,7 +53,6 @@
     @else
         <div class="alert alert-alert">Comenzar agregando a la Base de Datos.</div>
     @endif
-
     {!! $pacientes->links() !!}
-   {{--  <div>  <a href="{{route('logout')}}"> <button type="button" class="btn btn-primary" style="margin-top: 1rem" >Salir</button></a></div> --}}
+    <div>  <a href="{{route('InicioPaciente')}}"> <button type="button" class="btn btn-primary" style="margin-top: 1rem" >Volver</button></a></div> 
 @endsection

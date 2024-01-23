@@ -4,15 +4,15 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="text-center">Carga de Workers</h2>
+            <h2 class="text-center">Usuarios actuales</h2>
         </div>
         <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
-            <a class="btn btn-success " href="{{ route('administrador.create') }}"> Agregar worker</a>
+            <a class="btn btn-success " href="{{ route('administrador.create') }}"> Agregar usuario</a>
         </div>
     </div>
 
     @if ($message = Session::get('success'))
-        <div class="alert alert-success">
+        <div class="alert alert-success">Carga de usuarios
             {{ $message }}
         </div>
     @endif

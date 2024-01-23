@@ -4,11 +4,9 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="text-center">Agregar Producto</h2>
+            <h2 class="text-center">Agregar un usuario</h2>
         </div>
-        <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
-            <a class="btn btn-primary" href="{{ route('administrador.index') }}"> Volver</a>
-        </div>
+        
     </div>
 
     @if ($errors->any())
@@ -34,6 +32,9 @@
 		    <input type="password" class="form-control" id="passwordInput" name="password" required>
 		  </div>
 		 
-		  <button type="submit" class="btn btn-primary">Registrarse</button>
+		  <button type="submit" class="btn btn-primary">Aceptar</button>
+          <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
+            <a class="btn btn-primary" href="{{ route('administrador.index') }}"> Volver</a>
+        </div>
 		</form>
 @endsection

@@ -11,10 +11,18 @@
         </head>
 <div class="d-grid gap-2">
     <h2>¡Bienvenido {{Auth::user()->name}} selecciona una opción!</h2>
-    <a href="{{('pacientes')}}" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true">Administrar Pacientes</a>
-<a href="{{('historial')}}" class="btn btn-info" tabindex="-1" role="button" aria-disabled="true">Administrar Historial</a> 
   </div>
+
+<div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
+    <a href="{{('pacientes')}}" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true">Administrar Pacientes</a>
+   
+      
+</div>
+<div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
+    <a href="{{route('PanelHistoria')}}" class="btn btn-info" tabindex="-1" role="button" aria-disabled="true">Administrar Historial</a> 
+</div>
   <div>  <a href="{{route('logout')}}"> <button type="button" class="btn btn-primary" style="margin-top: 1rem" >Salir</button></a></div>
 
 </body>
 </html>
+</div>

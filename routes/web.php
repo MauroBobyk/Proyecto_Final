@@ -12,10 +12,16 @@ Route::get('/', function () {
     return redirect('login');
 });
 
-//Carga de pacientes e historial
+//Carga de pacientes
 Route::view('InicioPaciente',"InicioPaciente")->middleware('auth')->name('InicioPaciente');
 Route::resource('pacientes',PacienteController::class)->middleware('auth');
-Route::resource('historial',HistoriaController::class)->middleware('auth');
+
+
+
+//Historial
+Route::view('Carga', "/historia/Carga")->name('Carga')->middleware('auth');
+Route::view('PanelHistoria', "/historia/PanelHistoria")->name('PanelHistoria')->middleware('auth');
+Route::view('Consulta', "/historia/Consulta")->name('Consulta')->middleware('auth');
 
 //Funcion para Administrador
 Route::resource('administrador',AdministradorController::class)->middleware('auth');

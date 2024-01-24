@@ -16,9 +16,16 @@ class historia extends Model
         'Fecha',
         'Tratamiento',
     ];
-    public  function historias(){
+    public  function historia(){
         return $this->hasMany(historia::class, 'Matricula','Matricula');
     }
 
-    
+    public function paciente()
+    {
+        return $this->belongsTo(Paciente::class, 'Documento_Paciente', 'dni');
+    }  
+    public function medico()
+    {
+        return $this->belongsTo(Medico::class, 'Medico_Tratante', 'nombre');
+    }
 }

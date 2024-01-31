@@ -22,7 +22,6 @@
             <tr>
                 <th>id</th>
                 <th>Usuario</th>
-
                 <th width="280px">Acciones</th>
             </tr>
             @foreach ($users as $user)

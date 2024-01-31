@@ -19,9 +19,9 @@ Route::resource('pacientes',PacienteController::class)->middleware('auth');
 
 
 //Historial
-Route::view('Carga', "/historia/Carga")->name('Carga')->middleware('auth');
-Route::view('PanelHistoria', "/historia/PanelHistoria")->name('PanelHistoria')->middleware('auth');
-Route::view('Consulta', "/historia/Consulta")->name('Consulta')->middleware('auth');
+Route::resource('historia',HistoriaController::class)->middleware('auth');
+
+
 
 //Funcion para Administrador
 Route::resource('administrador',AdministradorController::class)->middleware('auth');

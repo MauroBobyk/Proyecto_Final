@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('Matricula')->index();
             $table->date('Fecha');
             $table->longText('Tratamiento');
+            $table->timestamps();
         });
     }
     /**

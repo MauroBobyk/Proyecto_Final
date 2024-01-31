@@ -19,7 +19,7 @@
       
 </div>
 <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
-    <a href="{{route('PanelHistoria')}}" class="btn btn-info" tabindex="-1" role="button" aria-disabled="true">Administrar Historial</a> 
+    <a href="{{('historia')}}" class="btn btn-info" tabindex="-1" role="button" aria-disabled="true">Administrar Historial</a> 
 </div>
   <div>  <a href="{{route('logout')}}"> <button type="button" class="btn btn-primary" style="margin-top: 1rem" >Salir</button></a></div>
 

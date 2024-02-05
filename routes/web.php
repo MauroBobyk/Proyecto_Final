@@ -16,13 +16,6 @@ Route::get('/', function () {
 Route::view('InicioPaciente',"InicioPaciente")->middleware('auth')->name('InicioPaciente');
 Route::resource('pacientes',PacienteController::class)->middleware('auth');
 
-
-
-//Historial
-Route::resource('historia',HistoriaController::class)->middleware('auth');
-
-
-
 //Funcion para Administrador
 Route::resource('administrador',AdministradorController::class)->middleware('auth');
 Route::resource('medicos',MedicoController::class)->middleware('auth');

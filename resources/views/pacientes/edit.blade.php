@@ -1,4 +1,4 @@
-@extends('pacientes.layout')
+@extends('layout')
 
 @section('content')
 
@@ -7,9 +7,7 @@
         <div class="col-lg-12">
             <h2 class="text-center">Modificar al Paciente {{ $paciente->name }}</h2>
         </div>
-        <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
-            <a class="btn btn-primary" href="{{ route('pacientes.index') }}"> Volver</a>
-        </div>
+       
     </div>
 
     @if ($errors->any())
@@ -47,7 +45,12 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <br>
                 <button type="submit" class="btn btn-primary">Aceptar</button>
+                <br>
+                <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
+                    <a class="btn btn-secondary" href="{{ route('pacientes.index') }}"> Volver</a>
+                </div>
             </div>
         </div>
 

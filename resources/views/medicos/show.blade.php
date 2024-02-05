@@ -1,4 +1,4 @@
-@extends('medicos.layout')
+@extends('layout')
 
 @section('content')
 

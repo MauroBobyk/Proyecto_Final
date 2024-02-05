@@ -1,3 +1,6 @@
+@extends('layout')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <!DOCTYPE HTML>
@@ -11,11 +14,13 @@
         </head>
 <div class="d-grid gap-2">
     <h2>¡Bienvenido {{Auth::user()->name}} selecciona una opción!</h2>
+    <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
     <a href="{{('administrador')}}" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true">Administrar Usuarios</a>
    <a href="{{('medicos')}}" class="btn btn-info" tabindex="-1" role="button" aria-disabled="true">Administrar Medicos</a> 
-   
   </div>
-  <div>  <a href="{{route('logout')}}"> <button type="button" class="btn btn-primary" style="margin-top: 1rem" >Salir</button></a></div>
+</div>
+  <div>  <a href="{{route('logout')}}"> <button type="button" class="btn btn-danger" style="margin-top: 1rem" >Salir</button></a></div>
 
 </body>
 </html>
+@endsection

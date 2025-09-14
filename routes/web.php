@@ -21,6 +21,9 @@ Route::resource('administrador',AdministradorController::class)->middleware('aut
 Route::resource('medicos',MedicoController::class)->middleware('auth');
 Route::view('InicioAdmin',"InicioAdmin")->middleware('auth')->name('InicioAdmin');
 
+// En routes/web.php
+Route::delete('administrador/{id}', [AdministradorController::class, 'destroy'])->name('administrador.destroy');
+
 
 //Login y registro
 Route::view('/login', "login")->name('login');

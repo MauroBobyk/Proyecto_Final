@@ -57,4 +57,19 @@ class AdministradorController extends Controller
         $users->delete();
         return redirect()->route('administrador.index')->with('success','Producto eliminado exitosamente.');
     }
+
+// En AdministradorController.php
+public function destroy($id)
+{
+    try {
+        $user = User::findOrFail($id);
+        $user->delete();
+        
+        return redirect()->route('administrador.index')
+                       ->with('success', 'Usuario eliminado correctamente');
+    } catch (\Exception $e) {
+        return redirect()->route('administrador.index')
+                       ->with('error', 'Error al eliminar usuario: ' . $e->getMessage());
+    }
+}
 }

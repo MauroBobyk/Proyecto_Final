@@ -30,10 +30,12 @@
                     <td>{{ $user->name }}</td>
                     <td>
                         <form action="{{ route('administrador.destroy',$user->id) }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-
-                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                             @csrf
+    @method('DELETE')
+    <button type="submit" class="btn btn-danger" 
+            onclick="return confirm('¿Estás seguro de eliminar este usuario?')">
+        Eliminar
+    </button>
                         </form>
                     </td>
                 </tr>
@@ -46,3 +48,15 @@
     {!! $users->links() !!}
 <div>  <a href="{{route('InicioAdmin')}}"> <button type="button" class="btn btn-primary" style="margin-top: 1rem" >Volver</button></a></div> 
 @endsection
+
+
+
+<!-- En resources/views/administrador/index.blade.php -->
+<form action="{{ route('administrador.destroy', $user->id) }}" method="POST">
+    @csrf
+    @method('DELETE')
+    <button type="submit" class="btn btn-danger" 
+            onclick="return confirm('¿Estás seguro de eliminar este usuario?')">
+        Eliminar
+    </button>
+</form>
